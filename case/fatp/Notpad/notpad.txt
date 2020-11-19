@@ -1,0 +1,39 @@
+﻿1、说说你的主要职责，具体到你的测试步骤，是怎么进行测试的，用到哪些测试技术和测试工具，怎么开展测试的
+2、测试周期多长，测试用例怎么写，如果时间紧张的情况会不会压缩测试时间，测试用例的测试点写的是抽象的还是具体到某个点
+3、说说被测项目，流程，怎么测的，有哪些复杂逻辑
+4、是怎么定位问题，如果接口日志不是很明显怎么定位，是直接丢给开发吗
+5、谈谈被测系统的风险 接口之间的相互调用，数据传输
+6、python接口测试用的什么框架（python+request+unistest），是怎么用的，还有其它方法吗（中间说了一个我不知道的我说我接触过）
+7、unittest的优缺点，cypress的用法
+8、用户数据，借款数据，有没有对数据安全进行测试，系统安全(数据鉴权测试) 数据加密 脱敏 第三方系统跟我们的业务系统不直接交互，而是通过一个转发平台进行交互
+9、RF和jmeter的区别，优缺点(说了一点她对jmeter的看法)
+10、公司用户量有多少，并发用户怎么设置，是产品给一个值还是自己定一个值，你们系统没有考虑过性能，安全方面的问题吗
+11、作为一个测试负责人要多方面考虑，像性能，安全，系统瓶颈
+12、怎么看CUP使用情况，分多核，单核
+13、windows系统的复制粘贴的测试用例
+14、进程和线程的区别
+15、对未来的职业规划
+
+
+1、mysql和oracle的区别
+
+     (1)mysql自动提交，oracle需要写commit或者点提交按钮
+     (2)分页查询的时候，mysql可以用limit x,y,oralce必须嵌套rownum > 30
+     (3)模糊查询的时候mysql用like '%str%',oracle也可以用'%str%',但是这种方法不能用索引，查找速度慢，字符串比较函数instr(字段名,'str')>0会得到精准查找
+     (4)空字符的处理：mysql的非空字符允许有空的内容，oracle的非空字符不允许有空的内容，按mysql的not null来定义oracle表结构，导数据时会报错，需要对非空字符做判断，如果是NULL或者是非空字符，需要改成空格的字符
+     SELECT *  FROM (SELECT tt.*, ROWNUM AS rowno   FROM (  SELECT t.*  FROM emp t  WHERE hire_date BETWEEN TO_DATE ('20060501', 'yyyymmdd')  AND TO_DATE ('20060731', 'yyyymmdd')   ORDER BY create_time DESC, emp_no) tt  WHERE ROWNUM <= 20) table_alias WHERE table_alias.rowno >= 10;
+     (5)日期字段的处理:mysql日期字段有DATE和TIME两种,oralce只有DATE一种
+     (6)mysql是轻量级数据库而且免费,oracle是重量级数据库,收费
+2、python的元组和列表的区别  声明方式不同，list用[],元组(tuple)用(),list元素是可变的，元组(tuple)创建后是不可变的，创建元组(tuple)比list快，占用存储空间比list小，所以能用元组(tuple)的地方就不要用list       
+
+3、数据库性能
+
+4、python字典排序
+
+5、sort方法是列表的还是字符串的 列表的sort方法，sorted让列表按顺序拔取，不会影响原列表顺序
+     字符串排序：可以先把字符串转换成列表再使用sort方法
+     sorted(字符串)：
+     l1="162"
+     l2=sorted(l1) 返回的是数组['1', '2', '6']，而不是字符串
+6、linux替换文件内容 sed -i 's/原字符串/新字符串/g' file（文件路径）
+

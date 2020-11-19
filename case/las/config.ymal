@@ -1,0 +1,10 @@
+SIT01:
+  las_url: "https://testlassit01.yylending.com"
+  host: "172.29.2.143"
+  port: 3501
+  user: "yjsapp"
+  passwd: "yjsAPP_123#"
+  las: "lasdb"
+  wk: "wkdb"
+  innereval: "innereval"
+

@@ -1,0 +1,42 @@
+test_add (testLAS.TestAdd) ... FAIL
+test_las_sumbit (testLAS.Test_LAS) ... ERROR
+
+======================================================================
+ERROR: test_las_sumbit (testLAS.Test_LAS)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\case\las\testLAS.py", line 11, in test_las_sumbit
+    LASInter.modifyInnerCreditLog('00054a9b54e14a8da6a1af397da0f9e7','SIT01','innereval')
+  File "D:\case\las\LASInterface.py", line 47, in modifyInnerCreditLog
+    db.InnerModifyCredit(sql)
+  File "D:\case\las\sqldb.py", line 42, in InnerModifyCredit
+    cert_id = ret_one[0]
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+FAIL: test_add (testLAS.TestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\case\las\testLAS.py", line 32, in test_add
+    self.assertEqual(j,6)
+AssertionError: 5 != 6
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.127s
+
+FAILED (failures=1, errors=1)
+test_add (testLAS.TestAdd) ... FAIL
+test_las_sumbit (testLAS.Test_LAS) ... ok
+
+======================================================================
+FAIL: test_add (testLAS.TestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\case\las\testLAS.py", line 32, in test_add
+    self.assertEqual(j,6)
+AssertionError: 5 != 6
+
+----------------------------------------------------------------------
+Ran 2 tests in 10.416s
+
+FAILED (failures=1)
